@@ -1,0 +1,19 @@
+{
+  "name": "axiosByBrad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel serve index.html --port 6999",
+    "build": "parcel build index.html  "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  }
+}
