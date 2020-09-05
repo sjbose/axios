@@ -1911,28 +1911,28 @@ module.exports = require('./lib/axios');
 // import axios from 'axios';
 var axios = require('axios'); // GET REQUEST
 //*METHOD-1
+// function getTodos() {
+//   axios({
+//     method: 'get',
+//     url: 'https://jsonplaceholder.typicode.com/todos',
+//     params: {
+//       _limit: 5
+//     }
+//   })
+//     .then(res => console.log(res))
+//     .catch(err => console.log(err));
+// }
+//*METHOD-2
 
 
 function getTodos() {
-  axios({
-    method: 'get',
-    url: 'https://jsonplaceholder.typicode.com/todos',
-    params: {
-      _limit: 5
-    }
-  }).then(function (res) {
-    return console.log(res);
+  /**mentioning .get method is option as the default req method is get  */
+  axios.get('https://jsonplaceholder.typicode.com/todos?_limit=20').then(function (res) {
+    return showOutput(res);
   }).catch(function (err) {
     return console.log(err);
   });
-} //*METHOD-2
-// function getTodos() {
-//   /**mentioning .get method is option as the default req method is get  */
-//   axios.get('https://jsonplaceholder.typicode.com/todos?_limit=20')
-//     .then(res => showOutput(res))
-//     .catch(err => console.log(err));
-// }
-//*FETCH
+} //*FETCH
 // function getTodos() {
 //   fetch('https://jsonplaceholder.typicode.com/todos?_limit=1').then(response => response.json()).then(data => console.log(data));
 // }
@@ -2128,7 +2128,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "7744" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4335" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

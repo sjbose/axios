@@ -1,5 +1,5 @@
 {
-  "name": "axiosByBrad",
+  "name": "axiosVsFetchAPI",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "build": "parcel build index.html  "
   },
   "keywords": [],
-  "author": "",
+  "author": "sj bose",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.20.0"

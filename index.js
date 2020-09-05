@@ -4,24 +4,24 @@ const axios = require('axios');
 // GET REQUEST
 //*METHOD-1
 
-function getTodos() {
-  axios({
-    method: 'get',
-    url: 'https://jsonplaceholder.typicode.com/todos',
-    params: {
-      _limit: 5
-    }
-  })
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
-}
-//*METHOD-2
 // function getTodos() {
-//   /**mentioning .get method is option as the default req method is get  */
-//   axios.get('https://jsonplaceholder.typicode.com/todos?_limit=20')
-//     .then(res => showOutput(res))
+//   axios({
+//     method: 'get',
+//     url: 'https://jsonplaceholder.typicode.com/todos',
+//     params: {
+//       _limit: 5
+//     }
+//   })
+//     .then(res => console.log(res))
 //     .catch(err => console.log(err));
 // }
+//*METHOD-2
+function getTodos() {
+  /**mentioning .get method is option as the default req method is get  */
+  axios.get('https://jsonplaceholder.typicode.com/todos?_limit=20')
+    .then(res => showOutput(res))
+    .catch(err => console.log(err));
+}
 //*FETCH
 // function getTodos() {
 //   fetch('https://jsonplaceholder.typicode.com/todos?_limit=1').then(response => response.json()).then(data => console.log(data));
